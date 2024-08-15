@@ -125,7 +125,7 @@ header {
     left: 0;
     width: 200%;
     height: 100%;
-    animation: moverCarrusel 10s linear infinite;
+    animation: moverCarrusel 15s linear infinite;
   }
 
   .imagen-carrusel img {
