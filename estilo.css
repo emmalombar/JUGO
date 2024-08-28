@@ -5,6 +5,7 @@ html {
 
   margin: 0;
   padding: 3vh 3vw;
+  padding-top: 0px;
   width: 100%;
   height: 100%;
 
@@ -29,7 +30,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background-color: black;
+  background-color: #2a2d2c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,7 +68,8 @@ header {
   justify-content: space-between;
 
   width: 100%;
-  height: 8.5vh;
+  height: 9vh;
+  z-index: 999;
 
   img {
     height: 7vh;
@@ -87,18 +89,18 @@ header {
     font-family: Switzer-Medium;
     text-align: center;
     text-decoration: none;
-    color: white;
+    color: #f2f2f2;
     display: inline-block;
     font-size: 2.5vh;
   }
 
   li:hover {
-    border-bottom: 0.3vh solid white;
+    border-bottom: 0.3vh solid #f2f2f2;
     cursor: pointer;
   }
 }
 
-.portada {
+#inicio-section {
   position: absolute;
 
   left: 0;
@@ -106,6 +108,20 @@ header {
   width: 100vw;
   overflow: hidden;
   margin-top: 9vh;
+  background-color: transparent;
+}
+
+#proyecto-section {
+  height: auto;
+  width: auto;
+  padding: 9vh 9vw;
+  background-color: transparent;
+}
+
+#nosotros-section {
+  height: auto;
+  width: auto;
+  padding: 9vh 9vw;
   background-color: transparent;
 }
 
@@ -141,10 +157,38 @@ header {
   transform: translate(-50%, -50%);
   font-family: Switzer-Semibold;
   text-align: left;
-  color: white;
-  font-size: 290%;
+  color: #f2f2f2;
+
+  font-size: 175%;
   z-index: 1;
-  pointer-events: none;
+}
+
+h2 {
+  font-family: Switzer-Bold;
+  text-align: left;
+  color: #f2f2f2;
+  font-size: 250%;
+}
+
+p {
+  font-family: Switzer-Regular;
+  text-align: left;
+  color: #f2f2f2;
+  margin-bottom: 15vh;
+  font-size: 144%;
+}
+
+.contents {
+  display: none;
+}
+
+.contents.show {
+  display: block;
+}
+
+.nav-item.active {
+  border-bottom: 0.3vh solid #f2f2f2;
+  cursor: pointer;
 }
 
 @keyframes moverCarrusel {
@@ -154,4 +198,16 @@ header {
   100% {
     transform: translateX(-50%);
   }
+}
+
+.animado {
+  opacity: 0;
+  position: relative;
+  left: -50%;
+  transition: left 2s, opacity 2s;
+}
+
+.animado.visible {
+  opacity: 1;
+  left: 0%;
 }
