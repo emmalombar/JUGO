@@ -265,16 +265,63 @@ header::after {
 
 /*--------------------------------------------------*/
 #contacto-section {
-  position: relative;
   box-sizing: border-box;
   width: auto;
   padding: 9vh 7vw;
   background-color: transparent;
-  display: flex;
+
+  display: none;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
-  top: 70vh;
+  align-items: center;
+}
+
+.formulario {
+  background: linear-gradient(90deg, #d6d85d4a, #2d9d744a);
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  border-radius: 25%;
+
+  padding: 2vh 2vw;
+
+  h2 {
+    text-align: center;
+    position: relative;
+    top: -17%;
+
+    margin: 0px;
+  }
+}
+
+.vacio {
+  color: transparent;
+  -webkit-text-stroke: 0.1vw #2d9d73;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.allenar {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+label {
+  font-family: Switzer-Regular;
+  font-size: 2vh;
+}
+
+input {
+  background-color: transparent;
 }
 
 /*--------------------------------------------------*/
